@@ -1,8 +1,8 @@
-add :: Float -> Float -> Float
-add x y = x + y
+double :: Int -> Int 
+double x  = x * 2
 
 main :: IO ()
 main = do
- print $ add 1.2 3.4
+ print $ double 4
 
- -- answer = 4.6
+ -- answer = 8
