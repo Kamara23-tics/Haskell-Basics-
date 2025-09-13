@@ -6,7 +6,8 @@ main :: IO ()
 main = do
  print $ double 4
 
- -- answer = 8
+ --Output:  
+ 8
 
 
 --increment: Increases a number by 1.
@@ -17,7 +18,8 @@ main :: IO ()
 main = do
  print $ increment 5
 
--- answer = 6
+-- Output :
+6
 
 
 --doubleThenIncrement Uses function composition to apply double first and then increment
@@ -28,4 +30,31 @@ main :: IO ()
 main = do
  print $ doubleThenincrement 5
 
- --answer = 11
+ --Output : 
+ 11
+
+
+-- Define a function to calculate the area of a circle
+circleArea :: Float -> Float
+circleArea radius = pi * radius ^ 2
+
+main :: IO ()
+main = do
+  let radius = 6.5
+  let area = circleArea radius
+  print $ "The area of the circle with radius " ++ show radius ++ " is " ++ show area
+  
+   --Output :
+   "The area of the circle with radius 6.5 is 132.7323"
+
+
+
+greaterThan18 :: Int -> Bool
+greaterThan18 x = x > 18
+
+main :: IO ()
+main = do
+ print $ greaterThan18 5 
+
+ --Output: 
+ False
