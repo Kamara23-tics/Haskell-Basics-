@@ -86,4 +86,5 @@ main = do
   print $ sortByScores players
 
   --Output
+  [20,18,15,10]
   
