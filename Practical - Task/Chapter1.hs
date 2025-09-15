@@ -58,3 +58,15 @@ main = do
 
  --Output: 
  False
+
+
+extractPlayers :: [(String,Int)] -> [String]
+extractPlayers players = map fst players
+
+main :: IO ()
+main = do
+ let players = [("Amara", 10), ("Ify", 15), ("Oge", 18), ("Efe", 20)]
+ print $ extractPlayers players
+
+--Output
+["Amara","Ify","Oge","Efe"]
