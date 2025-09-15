@@ -74,6 +74,7 @@ main = do
 ["Amara","Ify","Oge","Efe"]
 
 
+--To sort by scores of the players:
 import Data.List (sortBy)
 import Data.Ord (comparing)
 
@@ -87,4 +88,20 @@ main = do
 
   --Output
   [20,18,15,10]
+
+
+--To find the topThree players:
+import Data.List (sortBy)
+import Data.Ord (comparing)
+topThree:: [(String, Int)] -> [(String, Int)]
+topThree players = take 3 $ sortBy (flip $ comparing snd) players
+
+main :: IO ()
+main = do
+  let players = [("Amara", 10), ("Ify", 15), ("Oge", 18), ("Efe", 20)]
+  print $ topThree players
+
+  --Output
+  [("Efe",20),("Oge",18),("Ify",15)]
+  
   
