@@ -49,6 +49,7 @@ main = do
 
 
 
+--Write a function greaterThan18 that checks whether a given number is greater than 18.
 greaterThan18 :: Int -> Bool
 greaterThan18 x = x > 18
 
@@ -60,6 +61,7 @@ main = do
  False
 
 
+--extractPlayers: Takes a list of tuples ((name, score)) and extracts the player names
 extractPlayers :: [(String,Int)] -> [String]
 extractPlayers players = map fst players
 
