@@ -142,6 +142,22 @@ main = do
 
  --Output 
  10.0
+
+--Create a function applyTwice that applies a function twice to an input value
+
+applyTwice :: (y -> y) -> y -> y
+applyTwice f  = f (f x)
+
+double :: Int -> Int
+double x = x `div` 2
+
+main :: IO ()
+main = do
+  print $ applyTwice double 24 
+
+ --Output
+ 6
+  
   
   
   
