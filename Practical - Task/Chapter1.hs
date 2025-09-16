@@ -103,5 +103,21 @@ main = do
 
   --Output
   [("Efe",20),("Oge",18),("Ify",15)]
+
+
+--Create a function infiniteNumbers that generates an infinite list of numbers. Extract only the first n elements
+
+infiniteNumbers :: [Int]
+infiniteNumbers = [1..]
+
+takeN :: Int -> [Int]
+takeN n = take n infiniteNumbers
+
+main :: IO ()
+main = do
+  print $ takeN 5 
+
+  --Output
+  [1,2,3,4,5]
   
   
