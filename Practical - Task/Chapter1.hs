@@ -133,6 +133,7 @@ main = do
  --Output
  30
 
+--Write a function fToC that converts Fahrenheit to Celsius
 fToC :: Float -> Float 
 fToC x = (x - 32) * 5/9
 
