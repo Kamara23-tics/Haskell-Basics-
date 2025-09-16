@@ -22,7 +22,7 @@ main = do
 6
 
 
---doubleThenIncrement Uses function composition to apply double first and then increment
+--doubleThenIncrement: Uses function composition to apply double first and then increment
 doubleThenincrement :: Int -> Int
 doubleThenincrement x = x * 2 + 1
 
