@@ -132,6 +132,16 @@ main = do
 
  --Output
  30
+
+fToC :: Float -> Float 
+fToC x = (x - 32) * 5/9
+
+main :: IO ()
+main = do
+ print $ fToC 50
+
+ --Output 
+ 10.0
   
   
   
