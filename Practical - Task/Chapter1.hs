@@ -119,5 +119,20 @@ main = do
 
   --Output
   [1,2,3,4,5]
+
+
+--Define a function addNumbers that takes two integers and returns their sum
+
+addNumbers :: Int -> Int -> Int
+addNumbers a b = a + b
+
+main :: IO ()
+main = do
+ print $ addNumbers 13 17
+
+ --Output
+ 30
+  
+  
   
   
