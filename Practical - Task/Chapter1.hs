@@ -6,7 +6,7 @@ main :: IO ()
 main = do
  print $ double 4
 
- --Output:  
+ --Output  
  8
 
 
