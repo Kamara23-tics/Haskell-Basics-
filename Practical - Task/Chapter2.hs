@@ -41,3 +41,36 @@ main = do
 
 -- Output
 "Merry Christmas"
+
+myAge :: Int -> Int
+myAge a = 25
+
+main :: IO ()
+main = do
+ print $ myAge 25
+ 
+ 
+piValue :: Double -> Double 
+piValue π = 3.142
+ 
+main :: IO ()
+main = do
+ print $ piValue 3.142
+ 
+ 
+greeting :: String -> String 
+greeting a = "Hey!"
+
+main :: IO ()
+main = do
+ print $ greeting "Hey!"
+ 
+ 
+isHaskellFun :: Bool -> Bool
+isHaskellFun b  = True
+
+main :: IO ()
+main = do
+ print $ isHaskellFun True
+
+ 
