@@ -16,3 +16,13 @@ main = do
  print $ add 4 5
  --Output 
  9
+
+
+isEven :: Int -> Bool
+isEven y = y `mod` 2 == 0
+
+main :: IO ()
+main = do
+ print $ isEven 11
+ --Output
+ False 
