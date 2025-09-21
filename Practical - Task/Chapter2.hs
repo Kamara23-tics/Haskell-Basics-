@@ -74,3 +74,11 @@ main = do
  print $ isHaskellFun True
 
  
+add :: Int -> Int -> Int
+add y z = (+) y z
+
+main :: IO ()
+main = do
+ print $ add 5 3
+ --Output 
+ 8
