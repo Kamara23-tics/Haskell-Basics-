@@ -107,6 +107,8 @@ main = do
 --Output 
 False
 
+--Using infix notation for the following prefix functions
+--(+) 7 2
 add :: Int -> Int -> Int
 add x y = x + y
 
@@ -115,3 +117,27 @@ main = do
  print $ add 7 2
  --Output
  9
+
+--(*) 6 5
+multi :: Int -> Int -> Int
+multi x y = x * y
+
+main :: IO ()
+main = do 
+ print $ multi 6 5
+
+ --Output 
+ 30
+
+--(&&) True False
+result :: Bool
+result = True && False
+
+main :: IO ()
+main = do
+ print $ result
+
+ --Output
+ False
+
+
