@@ -77,6 +77,7 @@ main = do
  
 --Task 4:Using prefix notation for the following infix expressions:
 
+--5 + 3
 add :: Int -> Int -> Int
 add y z = (+) y z
 
@@ -85,3 +86,12 @@ main = do
  print $ add 5 3
  --Output 
  8
+
+--10 * 4
+multi :: Int -> Int -> Int
+multi x z = (*) x z
+
+main :: IO ()
+main = do
+ print $ multi 10 4
+ 40
