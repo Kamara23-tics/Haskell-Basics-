@@ -42,6 +42,7 @@ main = do
 -- Output
 "Merry Christmas"
 
+--Task 3:Defining immutable variables in Haskell
 myAge :: Int -> Int
 myAge a = 25
 
@@ -74,6 +75,8 @@ main = do
  print $ isHaskellFun True
 
  
+--Task 4:Using prefix notation for the following infix expressions:
+
 add :: Int -> Int -> Int
 add y z = (+) y z
 
