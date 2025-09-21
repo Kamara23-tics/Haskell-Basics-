@@ -94,4 +94,24 @@ multi x z = (*) x z
 main :: IO ()
 main = do
  print $ multi 10 4
- 40
+--Output
+40
+
+--True&&False
+result :: Bool
+result = (&&) True False
+
+main :: IO ()
+main = do
+ print $ result
+--Output 
+False
+
+add :: Int -> Int -> Int
+add x y = x + y
+
+main :: IO ()
+main = do 
+ print $ add 7 2
+ --Output
+ 9
