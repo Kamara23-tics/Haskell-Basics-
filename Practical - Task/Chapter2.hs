@@ -163,3 +163,22 @@ main = do
  print $ maxOfThree 7 (-10) 3
 --Output
 7
+
+--Task 6
+--Define an Int variable smallNumber with the value 2^62
+smallNumber :: Int -> Int
+smallNumber x =  x ^ 62
+
+main :: IO ()
+main = do
+ print $ smallNumber 2
+ --Output
+ 
+-- Define an Integer variable bigNumber with the value 2^127
+bigNumber :: Integer -> Integer
+bigNumber x =  x ^ 127
+
+main :: IO ()
+main = do
+ print $ bigNumber 2
+ --Output
