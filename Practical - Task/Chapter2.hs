@@ -154,3 +154,12 @@ main = do
   --Output
   circleArea with radius 3.5 is 38.484512
 
+--a function maxOfThree that takes three Int values and returns the maximum.
+maxOfThree :: Int -> Int-> Int -> Int
+maxOfThree x y z = x `max` y `max` z
+
+main :: IO ()
+main = do
+ print $ maxOfThree 7 (-10) 3
+--Output
+7
