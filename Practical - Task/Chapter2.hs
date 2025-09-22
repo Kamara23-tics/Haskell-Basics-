@@ -140,4 +140,17 @@ main = do
  --Output
  False
 
+--Task 5
+--a function circleArea that takes a Float radius and returns the area of the circle
+circleArea :: Float -> Float 
+circleArea r = pi * r * r
+
+main :: IO ()
+main = do
+  let r = 3.5
+  let area = circleArea r
+  putStrLn $ "circleArea with radius " ++ show r ++ " is " ++ show area
+  
+  --Output
+  circleArea with radius 3.5 is 38.484512
 
