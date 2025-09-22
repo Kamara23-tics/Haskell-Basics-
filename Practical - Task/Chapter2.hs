@@ -173,6 +173,7 @@ main :: IO ()
 main = do
  print $ smallNumber 2
  --Output
+ 4611686018427387904
  
 -- Define an Integer variable bigNumber with the value 2^127
 bigNumber :: Integer -> Integer
@@ -182,3 +183,4 @@ main :: IO ()
 main = do
  print $ bigNumber 2
  --Output
+ 170141183460469231731687303715884105728
