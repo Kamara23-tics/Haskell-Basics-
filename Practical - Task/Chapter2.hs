@@ -184,3 +184,13 @@ main = do
  print $ bigNumber 2
  --Output
  170141183460469231731687303715884105728
+
+--evaluating 2 ^ 64 to check the possible result 
+evaluate :: Int -> Int
+evaluate x =  x ^ 64
+
+main :: IO ()
+main = do
+ print $ evaluate 2
+ --Output
+ 0
