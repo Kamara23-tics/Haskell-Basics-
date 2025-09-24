@@ -205,4 +205,14 @@ main = do
   print $ rosesAreRed blue
   --Output
   True
+
+  rosesAreRed :: Bool -> Bool
+rosesAreRed x = False || False
+
+main :: IO ()
+main = do
+  let blue = True
+  print $ rosesAreRed blue
+  -- Output 
+  False
   
