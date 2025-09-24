@@ -206,7 +206,7 @@ main = do
   --Output
   True
 
-  rosesAreRed :: Bool -> Bool
+rosesAreRed :: Bool -> Bool
 rosesAreRed x = False || False
 
 main :: IO ()
@@ -215,4 +215,14 @@ main = do
   print $ rosesAreRed blue
   -- Output 
   False
+
+snowIsWhite :: Bool 
+snowIsWhite = not False
+
+main :: IO ()
+main = do
+  print $ snowIsWhite
+  -- Output 
+  True
+  
   
