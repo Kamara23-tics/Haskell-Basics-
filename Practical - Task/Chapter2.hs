@@ -194,3 +194,15 @@ main = do
  print $ evaluate 2
  --Output
  0
+
+ --Task 7 Boolean Expressions 
+rosesAreRed :: Bool -> Bool
+rosesAreRed x = True && True
+
+main :: IO ()
+main = do
+  let blue = False
+  print $ rosesAreRed blue
+  --Output
+  True
+  
