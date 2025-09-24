@@ -224,5 +224,14 @@ main = do
   print $ snowIsWhite
   -- Output 
   True
+
+lessThan10 :: Int -> Bool
+lessThan10 y = y < 10
+
+main :: IO ()
+main = do
+ print $ lessThan10 15
+ -- Output
+ False
   
   
