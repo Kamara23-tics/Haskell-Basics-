@@ -151,6 +151,7 @@ main = do
  --Output 
  10.0
 
+--Task 8
 --Create a function applyTwice that applies a function twice to an input value
 
 applyTwice :: (y -> y) -> y -> y
