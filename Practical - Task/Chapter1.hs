@@ -35,6 +35,7 @@ main = do
  11
 
 
+--Task2
 -- Define a function to calculate the area of a circle
 circleArea :: Float -> Float
 circleArea radius = pi * radius ^ 2
@@ -50,6 +51,7 @@ main = do
 
 
 
+--Task 3
 --Write a function greaterThan18 that checks whether a given number is greater than 18.
 greaterThan18 :: Int -> Bool
 greaterThan18 x = x > 18
@@ -62,6 +64,7 @@ main = do
  False
 
 
+--Task 4
 --extractPlayers: Takes a list of tuples ((name, score)) and extracts the player names
 extractPlayers :: [(String,Int)] -> [String]
 extractPlayers players = map fst players
@@ -106,6 +109,7 @@ main = do
   [("Efe",20),("Oge",18),("Ify",15)]
 
 
+--Task 5
 --Create a function infiniteNumbers that generates an infinite list of numbers. Extract only the first n elements
 
 infiniteNumbers :: [Int]
@@ -122,6 +126,7 @@ main = do
   [1,2,3,4,5]
 
 
+--Task 6
 --Define a function addNumbers that takes two integers and returns their sum
 
 addNumbers :: Int -> Int -> Int
@@ -134,6 +139,7 @@ main = do
  --Output
  30
 
+--Task 7
 --Write a function fToC that converts Fahrenheit to Celsius
 fToC :: Float -> Float 
 fToC x = (x - 32) * 5/9
