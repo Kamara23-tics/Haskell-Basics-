@@ -17,4 +17,22 @@ main = do
  "positive"
  "negative"
  "neutral"
- 
+
+ --Task 2
+ grade :: Int -> String
+grade score
+  | score >= 90 = "A"
+  | score >= 80 = "B"
+  | score >= 70 = "C"
+  | score >= 60 = "D"
+  | otherwise = "F"
+
+main :: IO ()
+main = do
+  putStrLn $ grade 95
+  putStrLn $ grade 72
+  putStrLn $ grade 50
+   --output
+   A
+   C
+   F
