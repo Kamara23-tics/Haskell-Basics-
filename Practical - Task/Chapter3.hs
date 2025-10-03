@@ -50,3 +50,22 @@ main :: IO ()
 main = do
  putStrLn $ rgbToHex (255,0,127)
  putStrLn $ rgbToHex (0,255,64)
+
+--Output
+
+
+triangleType :: Float -> Float -> Float -> String 
+triangleType a b c 
+ | a == b && b == c || c == a = "Equilateral"
+ | a == b || b == c || c == a = "Isosceles"
+ | otherwise = "Scalene"
+ 
+main :: IO ()
+main = do
+ putStrLn $ triangleType 3 3 3
+ putStrLn $ triangleType 5 5 8
+ putStrLn $ triangleType 6 7 8
+ --Output
+ Equilateral 
+ Isosceles 
+ Scalene
