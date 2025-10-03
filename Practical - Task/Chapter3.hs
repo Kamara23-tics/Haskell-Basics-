@@ -1,4 +1,5 @@
 --Task 1
+--Check if a number is positive, negative, or zero
 checkNumber :: Int -> String 
 checkNumber y =
   if y > 0
@@ -19,7 +20,8 @@ main = do
  "neutral"
 
  --Task 2
- grade :: Int -> String
+ --Determine the grade based on a score using guards
+grade :: Int -> String
 grade score
   | score >= 90 = "A"
   | score >= 80 = "B"
@@ -37,6 +39,8 @@ main = do
    C
    F
 --Task 3
+--Convert an RGB color to a hex string using let bindings
+
 import Text.Printf 
 
 rgbToHex :: (Int,Int,Int) -> String 
