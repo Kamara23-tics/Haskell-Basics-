@@ -76,7 +76,7 @@ main = do
 171.55994
 
 --Task 5
-
+--Determine the type of a triangle using guards
 triangleType :: Float -> Float -> Float -> String 
 triangleType a b c 
  | a == b && b == c || c == a = "Equilateral"
