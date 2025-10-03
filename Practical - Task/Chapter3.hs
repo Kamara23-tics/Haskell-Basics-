@@ -56,8 +56,13 @@ main = do
  putStrLn $ rgbToHex (0,255,64)
 
 --Output
+#FF007F
+#00FF40
 
+--Task 4
+Calculate the area of a triangle using Heron's formula
 
+--Task 5
 triangleType :: Float -> Float -> Float -> String 
 triangleType a b c 
  | a == b && b == c || c == a = "Equilateral"
@@ -70,6 +75,6 @@ main = do
  putStrLn $ triangleType 5 5 8
  putStrLn $ triangleType 6 7 8
  --Output
- Equilateral 
- Isosceles 
- Scalene
+ "Equilateral" 
+ "Isosceles" 
+ "Scalene"
