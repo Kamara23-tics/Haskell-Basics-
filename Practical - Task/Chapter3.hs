@@ -36,3 +36,17 @@ main = do
    A
    C
    F
+--Task 3
+import Text.Printf 
+
+rgbToHex :: (Int,Int,Int) -> String 
+rgbToHex (r, g, b) =
+ let rHex = printf "%02X" r
+     gHex = printf "%02X" g
+     bHex = printf "%02X" b
+  in "#"  ++ rHex ++ gHex ++ bHex 
+
+main :: IO ()
+main = do
+ putStrLn $ rgbToHex (255,0,127)
+ putStrLn $ rgbToHex (0,255,64)
