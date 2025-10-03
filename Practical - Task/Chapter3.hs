@@ -60,9 +60,23 @@ main = do
 #00FF40
 
 --Task 4
-Calculate the area of a triangle using Heron's formula
+--Calculate the area of a triangle using Heron's formula
+
+triangleArea :: Float -> Float -> Float -> Float 
+triangleArea a b c =
+ let s  = a + b + c / 2
+ in sqrt(s * (s - a) * (s - b) * (s - c))
+
+main :: IO ()
+main = do
+ print $ triangleArea 3 4 5 
+ print $ triangleArea 7 8 9
+ --Output
+39.09364
+171.55994
 
 --Task 5
+
 triangleType :: Float -> Float -> Float -> String 
 triangleType a b c 
  | a == b && b == c || c == a = "Equilateral"
