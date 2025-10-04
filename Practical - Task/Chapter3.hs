@@ -150,7 +150,8 @@ main = do
   Normal 
   Obese
 
-maxOfThree :: Int -> Int -> Int -> Int
+--Task 9
+--Find the maximum of three numbers using letmaxOfThree :: Int -> Int -> Int -> Int
 maxOfThree x y z =
  let maxXY = max x y
      maxAll = max maxXY z
@@ -162,4 +163,5 @@ main = do
  --Output
  20
  25
+--Task 10 Check if a string is a palindrome using recursion and guards
   
