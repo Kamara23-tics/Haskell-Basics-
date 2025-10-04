@@ -15,9 +15,9 @@ main = do
  putStrLn $ checkNumber 0
 
  --Output
- "positive"
- "negative"
- "neutral"
+ positive
+ negative
+ neutral
 
  --Task 2
  --Determine the grade based on a score using guards
@@ -89,9 +89,9 @@ main = do
  putStrLn $ triangleType 5 5 8
  putStrLn $ triangleType 6 7 8
  --Output
- "Equilateral" 
- "Isosceles" 
- "Scalene"
+ Equilateral 
+ Isosceles
+ Scalene
  --Task 6
  --Check leap year using if-then-else
 isLeapYear :: Int -> Bool
