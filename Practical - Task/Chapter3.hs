@@ -149,4 +149,17 @@ main = do
   --Output
   Normal 
   Obese
+
+maxOfThree :: Int -> Int -> Int -> Int
+maxOfThree x y z =
+ let maxXY = max x y
+     maxAll = max maxXY z
+  in maxAll
+main :: IO ()
+main = do
+ print $ maxOfThree 10 20 15
+ print $ maxOfThree 5 25 10
+ --Output
+ 20
+ 25
   
