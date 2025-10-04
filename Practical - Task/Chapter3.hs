@@ -132,3 +132,21 @@ main = do
 Spring
 Summer
 Autumn
+--Task 8 Calculate BMI and return category using where
+bmiCategory :: Float -> Float -> String
+bmiCategory weight height 
+  | bmi < 18.5  = "Underweight"
+  | bmi >= 18.5 && bmi <= 24.9 = "Normal"
+  | bmi == 25 && bmi <= 29.9 = "Overweight"
+  |otherwise = "Obese"
+ 
+  where bmi = weight / height ^ 2
+ 
+main :: IO ()
+main = do
+  putStrLn $ bmiCategory 70.0 1.75
+  putStrLn $ bmiCategory 90.0 1.8
+  --Output
+  Normal 
+  Obese
+  
