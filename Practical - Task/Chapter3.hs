@@ -113,3 +113,22 @@ main = do
  True
  False
  True
+
+ --Task 7 
+ --Determine the season based on the month using guards
+season :: Int -> String 
+season x 
+  | x == 12 || x == 1|| x == 2 = "Winter"
+  | x >= 3 && x <= 5 = "Spring"
+  | x >= 6 && x <= 8 = "Summer"
+  | x >= 9 && x <= 11 = "Autumn"
+  
+main :: IO ()
+main = do
+ putStrLn $ season 3
+ putStrLn $ season 7
+ putStrLn $ season 11
+ --Output
+Spring
+Summer
+Autumn
