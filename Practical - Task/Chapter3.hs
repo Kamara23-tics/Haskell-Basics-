@@ -163,5 +163,5 @@ main = do
  --Output
  20
  25
---Task 10 Check if a string is a palindrome using recursion and guards
+--Task 10 Check if a string is a palindrome using recursion and gua
   
