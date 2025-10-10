@@ -1,4 +1,4 @@
---Task 1
+--Task 1 Define a weatherReport Function
 weatherReport :: String -> String
 weatherReport "sunny" = "It's a bright and beautiful day"
 weatherReport "rainy" = "Don't forget your umbrella!"
@@ -11,7 +11,7 @@ main = do
  --Output
  "Weather unknown"
  
--- Task 2
+-- Task 2 Define a dayType Function
 dayType :: String -> String 
 dayType "Saturday" =  "It's a weekend!"
 dayType "Sunday" =  "It's a weekend!"
