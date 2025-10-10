@@ -47,3 +47,15 @@ main = do
 "You passed"
 "Better luck next time"
 "Invalid grade"
+
+specialBirthday :: Int -> String
+specialBirthday 1 = "First birthday!"
+specialBirthday 18 = "You're an adult!"
+specialBirthday 60 = "Finally, I can stop caring about new lingo!"
+specialBirthay _ = "Nothing special"
+
+main :: IO ()
+main = do
+ print $ specialBirthday 60
+-- Output
+"Finally, I can stop caring about new lingo!"
