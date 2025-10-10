@@ -9,4 +9,21 @@ main :: IO ()
 main = do
  putStrLn $ weatherReport "hot"
  --Output
- "weather unknown"
+ "Weather unknown"
+ 
+-- Task 2
+dayType :: String -> String 
+dayType "Saturday" =  "It's a weekend!"
+dayType "Sunday" =  "It's a weekend!"
+dayType "Monday" = "It's a weekday"
+dayType "Tuesday" = "It's a weekday"
+dayType "Wednesday" = "It's a weekday"
+dayType "Thursday" = "It's a weekday" 
+dayType "Friday" = "It's a weekday"
+dayType _ = "Invalid day"
+
+main :: IO ()
+main = do
+ putStrLn $ dayType "August"
+--Output 
+"Invalid day"
