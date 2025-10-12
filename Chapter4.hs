@@ -30,18 +30,18 @@ main = do
 --Task 3 Define a gradeComment Function
 gradeComment :: Int -> String 
 gradeComment x 
-  | x >= 90 = "Excellent"
-  | x >= 70 = "Good job"
-  | x >= 50 = "You passed"
-  | x >= 0 = "Better luck next time"
+  | x >= 90 || x == 100 = "Excellent"
+  | x >= 70 || x == 89 = "Good job"
+  | x >= 50 || x == 69 = "You passed"
+  | x >= 0 || x == 49 = "Better luck next time"
   | otherwise  = "Invalid grade"
 
 main :: IO ()
 main = do
- putStrLn $ gradeComment 90
- putStrLn $ gradeComment 65
- putStrLn $ gradeComment 30
- putStrLn $ gradeComment (-5)
+ putStrLn  (gradeComment 95)
+ putStrLn  (gradeComment 65)
+ putStrLn  (gradeComment 30)
+ putStrLn  (gradeComment (-5))
  --Output 
 "Excellent"
 "You passed"
