@@ -86,7 +86,7 @@ main = do
 "It contains three elements: [7,8,9]"
 "Not valid"
 
---Task 7
+--Task 7 Task 7: Ignore Elements in a List
 firstAndThird :: [String] -> String 
 firstAndThird (a:_:c:_) = "the first and third element " ++ show a ++ " and " ++ show c
 firstAndThird _ = "Doesn't exist"
@@ -96,5 +96,17 @@ main = do
  putStrLn (firstAndThird ["Efe","Oge","Ben","Chichi"])
  --Output
 the first and third element "Efe" and "Ben"
+
+--Task 8: Extract Values from Tuples
+describeTuple :: (Int, Int, Int, Int, Int) -> String 
+describeTuple (a, b, c, d, e) = "The 5 elements are " ++ show a ++ show b ++ show c ++ show d ++ show e
+describeTuple _ = "Invalid"
+main :: IO ()
+main = do
+ putStrLn (describeTuple (3, 5, 7, 9, 0))
+ putStrLn (describeTuple (5, 7, 8, 3, 2))
+--Output:
+The 5 elements are 35790
+The 5 elements are 57832
 
  
