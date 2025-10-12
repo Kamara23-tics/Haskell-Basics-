@@ -48,7 +48,7 @@ main = do
 "Better luck next time"
 "Invalid grade"
 
-specialBirthday :: Int -> String
+--Task 4: Rewrite specialBirthday using Pattern MatchingspecialBirthday :: Int -> String
 specialBirthday 1 = "First birthday!"
 specialBirthday 18 = "You're an adult!"
 specialBirthday 60 = "Finally, I can stop caring about new lingo!"
@@ -72,3 +72,13 @@ main = do
  putStrLn $ specialBirthday 30
  --Output 
  30 is invalid
+
+ --Task 6: Identify List Contents Using Pattern Matching
+whatsInsideThisList :: [Int] -> String 
+whatsInsideThisList [] = "It's empty"
+whatsInsideThisList [a,b,c] = "It contains three elements: " ++ show [a,b,c]
+
+main :: IO ()
+main = do
+ putStrLn (whatsInsideThisList [7,8,9])
+ 
