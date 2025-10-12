@@ -86,4 +86,15 @@ main = do
 "It contains three elements: [7,8,9]"
 "Not valid"
 
+--Task 7
+firstAndThird :: [String] -> String 
+firstAndThird (a:_:c:_) = "the first and third element " ++ show a ++ " and " ++ show c
+firstAndThird _ = "Doesn't exist"
+
+main :: IO ()
+main = do
+ putStrLn (firstAndThird ["Efe","Oge","Ben","Chichi"])
+ --Output
+the first and third element "Efe" and "Ben"
+
  
