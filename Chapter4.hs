@@ -71,16 +71,19 @@ main :: IO ()
 main = do
  putStrLn $ specialBirthday 30
  --Output 
- 30 is invalid
+"30 is invalid"
 
  --Task 6: Identify List Contents Using Pattern Matching
 whatsInsideThisList :: [Int] -> String 
 whatsInsideThisList [] = "It's empty"
 whatsInsideThisList [a,b,c] = "It contains three elements: " ++ show [a,b,c]
-
+whatsInsideThisList _ = "Not valid"
 main :: IO ()
 main = do
  putStrLn (whatsInsideThisList [7,8,9])
+ putStrLn (whatsInsideThisList [0])
  --Output:
-It contains three elements: [7,8,9]
+"It contains three elements: [7,8,9]"
+"Not valid"
+
  
