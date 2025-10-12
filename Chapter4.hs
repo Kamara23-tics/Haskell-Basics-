@@ -81,4 +81,6 @@ whatsInsideThisList [a,b,c] = "It contains three elements: " ++ show [a,b,c]
 main :: IO ()
 main = do
  putStrLn (whatsInsideThisList [7,8,9])
+ --Output:
+It contains three elements: [7,8,9]
  
