@@ -1,4 +1,4 @@
---Task 1 Define a weatherReport Function
+--Task 1: Define a weatherReport Function
 weatherReport :: String -> String
 weatherReport "sunny" = "It's a bright and beautiful day"
 weatherReport "rainy" = "Don't forget your umbrella!"
@@ -11,7 +11,7 @@ main = do
  --Output
  "Weather unknown"
  
--- Task 2 Define a dayType Function
+-- Task 2 : Define a dayType Function
 dayType :: String -> String 
 dayType "Saturday" =  "It's a weekend!"
 dayType "Sunday" =  "It's a weekend!"
@@ -27,7 +27,7 @@ main = do
  putStrLn $ dayType "August"
 --Output 
 "Invalid day"
---Task 3 Define a gradeComment Function
+--Task 3: Define a gradeComment Function
 gradeComment :: Int -> String 
 gradeComment x 
   | x >= 90 || x == 100 = "Excellent"
@@ -52,10 +52,23 @@ specialBirthday :: Int -> String
 specialBirthday 1 = "First birthday!"
 specialBirthday 18 = "You're an adult!"
 specialBirthday 60 = "Finally, I can stop caring about new lingo!"
-specialBirthay _ = "Nothing special"
+specialBirthday _ = "Nothing special"
 
 main :: IO ()
 main = do
  print $ specialBirthday 60
 -- Output
 "Finally, I can stop caring about new lingo!"
+
+--Task 5: Add a Catch-All Pattern with a Custom Message
+specialBirthday :: Int -> String
+specialBirthday 1 = "First birthday!"
+specialBirthday 18 = "You're an adult!"
+specialBirthday 60 = "Finally, I can stop caring about new lingo!"
+specialBirthday age =  show age ++ " is " ++ "invalid"
+
+main :: IO ()
+main = do
+ putStrLn $ specialBirthday 30
+ --Output 
+ 30 is invalid
