@@ -1,3 +1,5 @@
+--Practical Tasks: Improving and Combining Functions
+--Task 1 Using applyTwice
 double :: Int -> Int
 double y = y * 2 
 
@@ -10,6 +12,7 @@ main = do
  print $ applyThrice double 4
  --Output
  32
+--Task 2 Filtering Odd Numbers
 filterOddNumbers :: [Int] -> [Int]
 filterOddNumbers a = filter odd a
 
