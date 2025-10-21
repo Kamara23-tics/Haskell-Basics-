@@ -21,3 +21,14 @@ main = do
  print $ filterOddNumbers  [1..30]
  --Output:
 [1,3,5,7,9,11,13,15,17,19,21,23,25,27,29]
+
+--Task 3: Checking for Uppercase Letters
+import Data.Char (isUpper)
+upperCaseLetter :: String -> Bool
+upperCaseLetter = any isUpper
+
+main :: IO ()
+main = do
+   print $ map upperCaseLetter ["Ape", "dog", "cat", "Rat", "Cow"]
+ -- Output:
+[True,False,False,True,True]
