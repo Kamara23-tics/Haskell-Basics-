@@ -32,3 +32,13 @@ main = do
    print $ map upperCaseLetter ["Ape", "dog", "cat", "Rat", "Cow"]
  -- Output:
 [True,False,False,True,True]
+
+--Task 4
+biggerThan10 :: Int -> Bool
+biggerThan10 x = (\x -> x > 10) 15
+
+main :: IO ()
+main = do
+  print $ biggerThan10 15
+  --Output:
+  True
