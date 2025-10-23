@@ -42,3 +42,12 @@ main = do
   print $ biggerThan10 15
   --Output:
   True
+--Task 5
+multiplyByFive :: Int -> Int
+multiplyByFive x = (* 5) x
+
+main :: IO ()
+main = do
+ print $ multiplyByFive 4
+ --Output:
+ 20
