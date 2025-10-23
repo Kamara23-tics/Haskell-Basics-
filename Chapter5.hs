@@ -33,16 +33,16 @@ main = do
  -- Output:
 [True,False,False,True,True]
 
---Task 4
+--Task 4: Using Lambda Functions
 biggerThan10 :: Int -> Bool
-biggerThan10 x = (\x -> x > 10) 15
+biggerThan10 x = (\x -> x > 10) x
 
 main :: IO ()
 main = do
   print $ biggerThan10 15
   --Output:
   True
---Task 5
+--Task 5: Partial Application
 multiplyByFive :: Int -> Int
 multiplyByFive x = (* 5) x
 
