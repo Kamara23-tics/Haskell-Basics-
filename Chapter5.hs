@@ -51,3 +51,13 @@ main = do
  print $ multiplyByFive 4
  --Output:
  20
+
+--Task 6: Function Composition
+squaresOfEvenNumbers ::[Int] -> [Int]
+squaresOfEvenNumbers x = filter even . map (^ 2). take 20 $ x
+
+main :: IO ()
+main = do
+  print $ squaresOfEvenNumbers [1..20]
+ -- Output:
+[4,16,36,64,100,144,196,256,324,400]
