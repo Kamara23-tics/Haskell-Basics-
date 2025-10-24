@@ -12,6 +12,7 @@ main = do
  print $ applyThrice double 4
  --Output
  32
+
 --Task 2 Filtering Odd Numbers
 filterOddNumbers :: [Int] -> [Int]
 filterOddNumbers a = filter odd a
@@ -61,3 +62,13 @@ main = do
   print $ squaresOfEvenNumbers [1..20]
  -- Output:
 [4,16,36,64,100,144,196,256,324,400]
+
+--Task 7:The $ Operator
+result :: [Int] -> Int
+result a = sum $ map (*2) $ filter (>3) $ a
+
+main :: IO ()
+main = do
+ print $ result [1..10]
+ --Output 
+ 98
