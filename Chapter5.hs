@@ -72,3 +72,12 @@ main = do
  print $ result [1..10]
  --Output 
  98
+--Task 8 Point-Free Style
+addFive :: Int -> Int
+addFive = (+5)
+
+main :: IO ()
+main = do
+ print $ addFive 4
+ --Output
+ 9
