@@ -82,7 +82,7 @@ main = do
  --Output
  9
  
-transformList :: (a -> a) -> [a] -> [a]
+transformList :: (Int -> Int) -> [Int] -> [Int]
 transformList f xs = map (applyTwice f) xs
 
 applyTwice :: (a -> a) -> a -> a
