@@ -81,3 +81,15 @@ main = do
  print $ addFive 4
  --Output
  9
+ 
+transformList :: (a -> a) -> [a] -> [a]
+transformList f xs = map (applyTwice f) xs
+
+applyTwice :: (a -> a) -> a -> a
+applyTwice f xs = f (f xs)
+
+main :: IO ()
+main = do
+ print $ transformList (*2) [1..5]
+ Output:
+[4,8,12,16,20]
