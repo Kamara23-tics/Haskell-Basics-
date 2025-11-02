@@ -81,7 +81,7 @@ main = do
  print $ addFive 4
  --Output
  9
- 
+--Task 9: Higher-Order Function to Transform a List 
 transformList :: (Int -> Int) -> [Int] -> [Int]
 transformList f xs = map (applyTwice f) xs
 
@@ -93,3 +93,16 @@ main = do
  print $ transformList (*2) [1..5]
 -- Output:
 [4,8,12,16,20]
+--Task 10: Combining Higher-Order Functions
+greaterThan50 :: [Int] -> Bool
+greaterThan50 xs = any (>50) (map (^2) xs)
+
+main :: IO ()
+main = do
+ print $ greaterThan50 [4,5,6]
+ print $ greaterThan50 [7,8,9]
+
+ --Output:
+False
+True
+
