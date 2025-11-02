@@ -91,5 +91,5 @@ applyTwice f xs = f (f xs)
 main :: IO ()
 main = do
  print $ transformList (*2) [1..5]
- Output:
+-- Output:
 [4,8,12,16,20]
