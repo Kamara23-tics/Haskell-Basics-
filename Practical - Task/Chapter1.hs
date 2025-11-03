@@ -66,47 +66,16 @@ main = do
 
 --Task 4
 --extractPlayers: Takes a list of tuples ((name, score)) and extracts the player names
-extractPlayers :: [(String,Int)] -> [String]
-extractPlayers players = map fst players
+import Data.List
+getTopThreePlayers :: [(String, Int)] -> [String]
+getTopThreePlayers = map fst . take 3 . sortBy (\(_,s1) (_,s2) -> compare s2 s1)
 
 main :: IO ()
 main = do
- let players = [("Amara", 10), ("Ify", 15), ("Oge", 18), ("Efe", 20)]
- print $ extractPlayers players
-
---Output
-["Amara","Ify","Oge","Efe"]
-
-
---To sort by scores of the players:
-import Data.List (sortBy)
-import Data.Ord (comparing)
-
-sortByScores :: [(String, Int)] -> [Int]
-sortByScores players = map snd $ sortBy (flip $ comparing snd) players
-
-main :: IO ()
-main = do
-  let players = [("Amara", 10), ("Ify", 15), ("Oge", 18), ("Efe", 20)]
-  print $ sortByScores players
-
-  --Output
-  [20,18,15,10]
-
-
---To find the topThree players:
-import Data.List (sortBy)
-import Data.Ord (comparing)
-topThree:: [(String, Int)] -> [(String, Int)]
-topThree players = take 3 $ sortBy (flip $ comparing snd) players
-
-main :: IO ()
-main = do
-  let players = [("Amara", 10), ("Ify", 15), ("Oge", 18), ("Efe", 20)]
-  print $ topThree players
-
-  --Output
-  [("Efe",20),("Oge",18),("Ify",15)]
+ print $ (getTopThreePlayers [("Oge", 2), ("Ife", 4), ("Bebe", 5), ("Ogo", 8)])
+ --Output:
+["Ogo","Bebe","Ife"]
+ 
 
 
 --Task 5
