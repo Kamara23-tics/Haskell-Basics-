@@ -21,3 +21,12 @@ main = do
  print $ nthFibonacci 8
  --Output 
  21
+--Task 3 Sum of Elements Using foldr
+sumAll :: [Int] -> Int
+sumAll = foldr (+) 0
+
+main :: IO ()
+main = do
+ print $ sumAll [10..20]
+ --Output
+ 165
