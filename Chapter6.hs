@@ -30,3 +30,12 @@ main = do
  print $ sumAll [10..20]
  --Output
  165
+ --Task 4 Implement a function to compute the product of elements in a list using foldl.
+productList :: [Int] -> Int
+productList = foldl (*) 1
+
+main :: IO ()
+main = do
+ print $ productList [1..5]
+ --Output
+ 120
