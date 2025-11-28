@@ -39,3 +39,14 @@ main = do
  print $ productList [1..5]
  --Output
  120
+
+revList :: [Int] -> [Int]
+revList [] = []
+revList (x:xs) = revList xs ++ [x]
+
+main :: IO ()
+main = do
+ print $ revList [5..15]
+
+--Output:
+[15,14,13,12,11,10,9,8,7,6,5]
