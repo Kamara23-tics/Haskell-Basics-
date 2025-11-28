@@ -40,6 +40,7 @@ main = do
  --Output
  120
 
+--Task 5:Reverse a List (Recursive)
 revList :: [Int] -> [Int]
 revList [] = []
 revList (x:xs) = revList xs ++ [x]
