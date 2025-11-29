@@ -24,15 +24,20 @@ main = do
 
 
 --doubleThenIncrement: Uses function composition to apply double first and then increment
-doubleThenincrement :: Int -> Int
-doubleThenincrement x = x * 2 + 1
+double :: Num a => a -> a
+double x = x * 2
+
+increment :: Num a => a -> a
+increment x = x + 1 
+
+doubleThenIncrement :: Num a => a -> a
+doubleThenIncrement = increment . double 
 
 main :: IO ()
 main = do
- print $ doubleThenincrement 5
-
- --Output : 
- 11
+ print $ doubleThenIncrement 6
+ -- Output 
+ 13
 
 
 --Task2
