@@ -91,3 +91,14 @@ main = do
   print $ filterEvens [1..20] 
   --Output:
 [2,4,6,8,10,12,14,16,18,20]
+--Task 9: Implement a function that applies a given function to each element of a list (map implementation)
+myMap :: (a -> b) -> [a] -> [b]
+myMap _ [] = []                     
+myMap f (x:xs) = f x : myMap f xs
+
+main :: IO ()
+main = do
+ print $ myMap (^2) [1..6]
+ --Output
+ Output:
+[1,4,9,16,25,36]
