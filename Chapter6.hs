@@ -79,3 +79,15 @@ main = do
   --Output 
 6
 0
+--Task 8:Implement a function that filters all even numbers from a list.
+filterEvens :: [Int] -> [Int]
+filterEvens [] = []                     
+filterEvens (x:xs)
+  | even x    = x : filterEvens xs  
+  | otherwise = filterEvens xs             
+  
+main :: IO ()
+main = do
+  print $ filterEvens [1..20] 
+  --Output:
+[2,4,6,8,10,12,14,16,18,20]
