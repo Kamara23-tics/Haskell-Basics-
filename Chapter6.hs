@@ -102,3 +102,16 @@ main = do
  --Output
  Output:
 [1,4,9,16,25,36]
+
+--Task 10:Implement a recursive function that takes a number and returns a list of its digits.
+toDigits :: Int -> [Int]
+toDigits n
+  | n < 0     = []                  
+  | n < 10    = [n]                       
+  | otherwise = toDigits (n `div` 10) ++ [n `mod` 10]
+
+main :: IO ()
+main = do
+ print $ toDigits 12345
+-- Output
+[1,2,3,4,5]
