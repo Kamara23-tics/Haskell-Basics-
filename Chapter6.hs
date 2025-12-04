@@ -65,3 +65,17 @@ main = do
   --Output 
 True
 False
+
+--Task 7:Implement a function that takes a list and returns the length of the list.
+listLength :: [a] -> Int
+listLength [] = 0                       
+listLength (_:xs) = 1 + listLength xs
+
+main :: IO ()
+main = do
+  print $ listLength [1, 2, 3, 4, 5]           
+  print $ listLength []                       
+  print $ listLength ['a', 'b', 'c']
+  --Output 
+6
+0
