@@ -51,3 +51,17 @@ main = do
 
 --Output:
 [15,14,13,12,11,10,9,8,7,6,5]
+--Task 6:Implement a function that determines whether a given element exists in a list.
+elemExists :: Eq a => a -> [a] -> Bool
+elemExists _ [] = False       
+elemExists x (y:ys)
+  | x == y    = True                  
+  | otherwise = elemExists x ys            
+  
+main :: IO ()
+main = do
+  print $ elemExists 4 [1, 2, 3, 4, 5]  
+  print $ elemExists 'a' ['l', 'o', 'v', 'e']
+  --Output 
+True
+False
