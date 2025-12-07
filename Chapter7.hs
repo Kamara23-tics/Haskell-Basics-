@@ -225,3 +225,58 @@ Nothing
 Nothing
 Nothing
 Nothing
+--Task 9: Create a type class Describable with a method describe.
+--Implement it for Bool and Shape
+data Shape = Circle Double
+           | Rectangle Double Double
+           | Triangle Double Double Double
+           deriving (Show, Read, Eq)
+
+parseShape :: String -> Maybe Shape
+parseShape str = case reads str of
+    [(shape, "")] -> Just shape
+    _             -> Nothing
+
+class Describable a where
+    describe :: a -> String
+
+instance Describable Bool where
+    describe True  = "This is a boolean value representing truth"
+    describe False = "This is a boolean value representing falsehood"
+
+
+instance Describable Shape where
+    describe (Circle r) = 
+        "A circle with radius " ++ show r ++ " units"
+    describe (Rectangle w h) = 
+        "A rectangle with width " ++ show w ++ " and height " ++ show h ++ " units"
+    describe (Triangle a b c) = 
+        "A triangle with sides " ++ show a ++ ", " ++ show b ++ ", and " ++ show c ++ " units"
+
+main :: IO ()
+main = do
+    putStrLn "=== Describing Bools ==="
+    putStrLn $ describe True
+    putStrLn $ describe False
+    
+    putStrLn "\n=== Describing Shapes ==="
+    putStrLn $ describe (Circle 5.0)
+    putStrLn $ describe (Rectangle 3.0 4.0)
+    putStrLn $ describe (Triangle 3.0 4.0 5.0)
+    
+    putStrLn "\n=== Parsing and Describing ==="
+    case parseShape "Circle 7.5" of
+        Just shape -> putStrLn $ "Parsed: " ++ describe shape
+        Nothing    -> putStrLn "Failed to parse"
+--Output:
+=== Describing Bools ===
+This is a boolean value representing truth
+This is a boolean value representing falsehood
+
+=== Describing Shapes ===
+A circle with radius 5.0 units
+A rectangle with width 3.0 and height 4.0 units
+A triangle with sides 3.0, 4.0, and 5.0 units
+
+=== Parsing and Describing ===
+Parsed: A circle with radius 7.5 units
