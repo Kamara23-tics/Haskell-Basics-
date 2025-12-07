@@ -46,3 +46,20 @@ main = do
 Testing Eq instance for Color:
 True
 False
+--Task 3: Write a function compareValues that takes two arguments of type a and returns the larger one.
+--Ensure that a is both an instance of Eq and Ord.
+compareValues :: (Eq a, Ord a) => a -> a -> a
+compareValues x y = 
+  if x > y 
+   then x 
+     else y
+
+main :: IO ()
+main = do
+ print $ compareValues 5 3        
+ putStrLn $ compareValues "apple" "banana"  
+ print $ compareValues 3.14 2.71  
+ --Output:
+5
+banana
+3.14
