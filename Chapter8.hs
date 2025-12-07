@@ -209,3 +209,21 @@ main = do
 Animal examples:
 This is a dog named Buddy
 This is a cat named Whiskers
+
+--Task 8: Using type synonyms, create a type synonym Name for String and a type synonym Age for Int.
+--Define a function greet :: Name -> Age -> String that takes a name and age and returns a greeting.
+type Name = String
+type Age = Int
+
+greet :: Name -> Age -> String
+greet name age = "Hi, " ++ name ++ "! You are " ++ show age ++ " years old."
+
+main :: IO ()
+main = do
+    putStrLn $ greet "Ify" 30
+    putStrLn $ greet "Redo" 25
+    putStrLn $ greet "Cain" 42
+--Output:
+Hi, Ify! You are 30 years old.
+Hi, Redo! You are 25 years old.
+Hi, Cain! You are 42 years old.
