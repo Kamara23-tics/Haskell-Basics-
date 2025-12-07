@@ -88,3 +88,59 @@ main = do
 --Output:
 Employee example:
 Employee {name = "Richard", experienceInYears = 7.5}
+
+--Task 5: Define a type Person using record syntax that includes name :: String, age :: Int, and isEmployed :: Bool.
+--Create a person1 who is employed, and a person2 who is unemployed.
+data Person = Person
+    { name :: String
+    , age :: Int
+    , isEmployed :: Bool
+    } deriving (Show, Eq)
+
+person1 :: Person
+person1 = Person
+    { name = "Grace"
+    , age = 25
+    , isEmployed = True
+    }
+
+person2 :: Person
+person2 = Person
+    { name = "Kelsey"
+    , age = 18
+    , isEmployed = False
+    }
+
+main :: IO ()
+main = do
+    putStrLn "Person examples:"
+    print person1
+    print person2data Person = Person
+    { name :: String
+    , age :: Int
+    , isEmployed :: Bool
+    } deriving (Show, Eq)
+
+person1 :: Person
+person1 = Person
+    { name = "Grace"
+    , age = 25
+    , isEmployed = True
+    }
+
+person2 :: Person
+person2 = Person
+    { name = "Kelsey"
+    , age = 18
+    , isEmployed = False
+    }
+
+main :: IO ()
+main = do
+    putStrLn "Person examples:"
+    print person1
+    print person2
+--Output:
+Person examples:
+Person {name = "Grace", age = 25, isEmployed = True}
+Person {name = "Kelsey", age = 18, isEmployed = False}
