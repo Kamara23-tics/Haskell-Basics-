@@ -192,3 +192,36 @@ Green -> Blue
 Blue -> Indigo
 Indigo -> Violet
 Violet -> Red
+
+--Task 8: Parse a Value from a String Using Read
+--Write a function parseShape that takes a String and returns a Shape
+data Shape = Circle Double
+           | Rectangle Double Double
+           | Triangle Double Double Double
+           deriving (Show, Read, Eq)
+
+parseShape :: String -> Maybe Shape
+parseShape str = case reads str of
+    [(shape, "")] -> Just shape
+    _             -> Nothing
+
+main :: IO ()
+main = do
+    -- Valid inputs
+    print $ parseShape "Circle 5.0"                    -- Just (Circle 5.0)
+    print $ parseShape "Rectangle 3.0 4.0"             -- Just (Rectangle 3.0 4.0)
+    print $ parseShape "Triangle 3.0 4.0 5.0"          -- Just (Triangle 3.0 4.0 5.0)
+    
+    -- Invalid inputs
+    print $ parseShape "Square 2.0"                    -- Nothing
+    print $ parseShape "Circle"                        -- Nothing
+    print $ parseShape "invalid input"                 -- Nothing
+    print $ parseShape "Circle 5.0 extra"              -- Nothing
+--Output:
+Just (Circle 5.0)
+Just (Rectangle 3.0 4.0)
+Just (Triangle 3.0 4.0 5.0)
+Nothing
+Nothing
+Nothing
+Nothing
