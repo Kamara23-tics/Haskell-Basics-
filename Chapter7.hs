@@ -150,3 +150,45 @@ Circumference (Float, r=3.5): 21.99115
 Using Integral types (converted to Floating):
 Circumference (Int, r=5): 31.41592653589793
 Circumference (Integer, r=10): 62.83185307179586
+--Task 7: Create a function nextColor that takes a Color and returns the next color in sequence. If it reaches the last color, it should wrap around.
+data Color = Red | Orange | Yellow | Green | Blue | Indigo | Violet
+    deriving (Show, Eq, Enum, Bounded)
+
+-- Function that returns the next color, wrapping around
+nextColor :: Color -> Color
+nextColor c
+    | c == maxBound = minBound
+    | otherwise = succ c
+
+main :: IO ()
+main = do
+    putStrLn "Demonstrating nextColor with wrapping:"
+    putStrLn $ "Next after Red: " ++ show (nextColor Red)
+    putStrLn $ "Next after Orange: " ++ show (nextColor Orange)
+    putStrLn $ "Next after Yellow: " ++ show (nextColor Yellow)
+    putStrLn $ "Next after Green: " ++ show (nextColor Green)
+    putStrLn $ "Next after Blue: " ++ show (nextColor Blue)
+    putStrLn $ "Next after Indigo: " ++ show (nextColor Indigo)
+    putStrLn $ "Next after Violet (wraps): " ++ show (nextColor Violet)
+    
+    putStrLn "\nAll colors in sequence:"
+    let colors = [Red, Orange, Yellow, Green, Blue, Indigo, Violet]
+    mapM_ (\c -> putStrLn $ show c ++ " -> " ++ show (nextColor c)) colors
+    --Output:
+Demonstrating nextColor with wrapping:
+Next after Red: Orange
+Next after Orange: Yellow
+Next after Yellow: Green
+Next after Green: Blue
+Next after Blue: Indigo
+Next after Indigo: Violet
+Next after Violet (wraps): Red
+
+All colors in sequence:
+Red -> Orange
+Orange -> Yellow
+Yellow -> Green
+Green -> Blue
+Blue -> Indigo
+Indigo -> Violet
+Violet -> Red
