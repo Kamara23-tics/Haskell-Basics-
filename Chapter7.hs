@@ -63,3 +63,42 @@ main = do
 5
 banana
 3.14
+--Task 4:Define a data type Shape with constructors Circle Double and Rectangle Double Double.
+--Implement Show and Read instances for it.
+data Shape = Circle Double 
+           | Rectangle Double Double
+           deriving (Eq)
+
+-- Show instance for Shape
+instance Show Shape where
+    show (Circle r) = "Circle " ++ show r
+    show (Rectangle w h) = "Rectangle " ++ show w ++ " " ++ show h
+
+-- Read instance for Shape
+instance Read Shape where
+    readsPrec _ input = 
+        tryCircle input ++ tryRectangle input
+      where
+        tryCircle s = 
+            [(Circle r, rest) | ("Circle", s1) <- lex s,
+                                (r, rest) <- reads s1]
+        
+        tryRectangle s = 
+            [(Rectangle w h, rest) | ("Rectangle", s1) <- lex s,
+                                     (w, s2) <- reads s1,
+                                     (h, rest) <- reads s2]
+
+
+main :: IO ()
+main = do
+    let c = Circle 5.0
+    putStrLn $ "Circle: " ++ show c
+    
+    let r = Rectangle 3.0 4.0
+    putStrLn $ "Rectangle: " ++ show r
+    
+    let c2 = read "Circle 7.5" :: Shape
+    putStrLn $ "Read circle: " ++ show c2
+    
+    let r2 = read "Rectangle 10.0 20.0" :: Shape
+    putStrLn $ "Read rectangle: " ++ show r2
