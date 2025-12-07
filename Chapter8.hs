@@ -67,3 +67,24 @@ main = do
 Shape area calculations:
 Circle with radius 5: 78.53982
 Rectangle with sides 10 and 5: 50.0
+
+--Task 4: Define a new type Employee using record syntax with fields name :: String and experienceInYears :: Float.
+--Create an employee richard with 7.5 years of experience.
+data Employee = Employee
+    { name :: String
+    , experienceInYears :: Float
+    } deriving (Show, Eq)
+
+richard :: Employee
+richard = Employee
+    { name = "Richard"
+    , experienceInYears = 7.5
+    }
+
+main :: IO ()
+main = do
+    putStrLn "Employee example:"
+    print richard
+--Output:
+Employee example:
+Employee {name = "Richard", experienceInYears = 7.5}
