@@ -102,3 +102,8 @@ main = do
     
     let r2 = read "Rectangle 10.0 20.0" :: Shape
     putStrLn $ "Read rectangle: " ++ show r2
+    --Output:
+Circle: Circle 5.0
+Rectangle: Rectangle 3.0 4.0
+Read circle: Circle 7.5
+Read rectangle: Rectangle 10.0 20.0
