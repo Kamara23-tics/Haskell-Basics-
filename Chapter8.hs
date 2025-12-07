@@ -144,3 +144,42 @@ main = do
 Person examples:
 Person {name = "Grace", age = 25, isEmployed = True}
 Person {name = "Kelsey", age = 18, isEmployed = False}
+
+--Task 6: Define a type Shape using record syntax with fields center :: (Float, Float), color :: String, and radius :: Float for circles, and width :: Float, height :: Float, and color :: String for rectangles.
+--Create an instance of Shape for a circle and a rectangle.
+data Shape = Circle
+    { center :: (Float, Float)
+    , color :: String
+    , radius :: Float
+    }
+    | Rectangle
+    { rectCenter :: (Float, Float)
+    , rectColor :: String
+    , width :: Float
+    , height :: Float
+    } deriving (Show, Eq)
+
+circle :: Shape
+circle = Circle
+    { center = (0.0, 0.0)
+    , color = "Red"
+    , radius = 5.0
+    }
+
+rectangle :: Shape
+rectangle = Rectangle
+    { rectCenter = (10.0, 10.0)
+    , rectColor = "Blue"
+    , width = 8.0
+    , height = 4.0
+    }
+
+main :: IO ()
+main = do
+    putStrLn "Shape examples:"
+    print circle
+    print rectangle
+--Output:
+Shape examples:
+Circle {center = (0.0,0.0), color = "Red", radius = 5.0}
+Rectangle {rectCenter = (10.0,10.0), rectColor = "Blue", width = 8.0, height = 4.0}
