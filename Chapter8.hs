@@ -1,4 +1,4 @@
---Task 1: Type Synonyms and Basic Function
+--Task 1: 
 type Address = String
 type Value = Int
 
@@ -15,7 +15,10 @@ addr1 addr2 100
 wallet_A wallet_B 500
 0x123abc 0x456def 250
 
---Task 2:
+--Task 2:Define a new type PaymentMethod with the constructors Cash, Card, and Cryptocurrency.
+--Create a Person type that includes a name, address (tuple of String and Int), and a payment method.
+--Create a person bob who pays with cash.
+
 type Address = String
 type Value = Int
 
