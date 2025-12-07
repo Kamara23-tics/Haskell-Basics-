@@ -183,3 +183,29 @@ main = do
 Shape examples:
 Circle {center = (0.0,0.0), color = "Red", radius = 5.0}
 Rectangle {rectCenter = (10.0,10.0), rectColor = "Blue", width = 8.0, height = 4.0}
+
+--Task 7:Define a new type Animal using data with constructors Dog String and Cat String.
+--Create a function describeAnimal :: Animal -> String that describes the animal.
+--Create instances for a dog and a cat.
+data Animal = Dog String | Cat String
+    deriving (Show, Eq)
+
+describeAnimal :: Animal -> String
+describeAnimal (Dog name) = "This is a dog named " ++ name
+describeAnimal (Cat name) = "This is a cat named " ++ name
+
+dog :: Animal
+dog = Dog "Buddy"
+
+cat :: Animal
+cat = Cat "Whiskers"
+
+main :: IO ()
+main = do
+    putStrLn "Animal examples:"
+    putStrLn $ describeAnimal dog
+    putStrLn $ describeAnimal cat
+---Output:
+Animal examples:
+This is a dog named Buddy
+This is a cat named Whiskers
