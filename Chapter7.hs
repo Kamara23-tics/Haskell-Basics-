@@ -142,3 +142,11 @@ main = do
     putStrLn "\nUsing Integral types (converted to Floating):"
     putStrLn $ "Circumference (Int, r=5): " ++ show (circleCircumferenceInt (5 :: Int) :: Double)
     putStrLn $ "Circumference (Integer, r=10): " ++ show (circleCircumferenceInt (10 :: Integer) :: Double)
+    --Output:
+Using Floating types directly:
+Circumference (Double, r=5.0): 31.41592653589793
+Circumference (Float, r=3.5): 21.99115
+
+Using Integral types (converted to Floating):
+Circumference (Int, r=5): 31.41592653589793
+Circumference (Integer, r=10): 62.83185307179586
