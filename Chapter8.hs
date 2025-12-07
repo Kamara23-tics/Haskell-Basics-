@@ -227,3 +227,39 @@ main = do
 Hi, Ify! You are 30 years old.
 Hi, Redo! You are 25 years old.
 Hi, Cain! You are 42 years old.
+
+--Task 9:Define a type Transaction with fields from :: Address, to :: Address, amount :: Value, and transactionId :: String.
+--Define a function createTransaction :: Address -> Address -> Value -> String that creates a Transaction and returns the transaction id.
+type Address = String
+type Value = Int
+
+data Transaction = Transaction
+    { from :: Address
+    , to :: Address
+    , amount :: Value
+    , transactionId :: String
+    } deriving (Show, Eq)
+
+createTransaction :: Address -> Address -> Value -> String
+createTransaction fromAddr toAddr val = 
+    let txId = "TX-" ++ fromAddr ++ "-" ++ toAddr ++ "-" ++ show val
+        tx = Transaction
+            { from = fromAddr
+            , to = toAddr
+            , amount = val
+            , transactionId = txId
+            }
+    in transactionId tx
+
+main :: IO ()
+main = do
+    putStrLn "Transaction examples:"
+    let txId1 = createTransaction "addr1" "addr2" 100
+    putStrLn $ "Transaction ID: " ++ txId1
+    
+    let txId2 = createTransaction "wallet_A" "wallet_B" 500
+    putStrLn $ "Transaction ID: " ++ txId2
+--Output:
+Transaction examples:
+Transaction ID: TX-addr1-addr2-100
+Transaction ID: TX-wallet_A-wallet_B-500
