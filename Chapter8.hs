@@ -263,3 +263,26 @@ main = do
 Transaction examples:
 Transaction ID: TX-addr1-addr2-100
 Transaction ID: TX-wallet_A-wallet_B-500
+
+--Task 10: Using deriving Show, define a type Book with fields title :: String, author :: String, and year :: Int.
+--Create a Book instance for a book and print it using the Show instance.
+data Book = Book
+    { title :: String
+    , author :: String
+    , year :: Int
+    } deriving (Show)
+
+book :: Book
+book = Book
+    { title = "The Zodiac Hunters"
+    , author = "Grace Onah"
+    , year = 2024
+    }
+
+main :: IO ()
+main = do
+    putStrLn "Book example:"
+    print book
+--Output:
+Book example:
+Book {title = "The Zodiac Hunters", author = "Grace Onah", year
