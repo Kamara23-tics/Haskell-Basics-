@@ -57,3 +57,28 @@ wallet_A wallet_B 500
 Person example:
 Person {name = "Bob", address = ("123 Main St",12345), paymentMethod = Cash}
 
+--Task 3: Define a type Shape with constructors Circle Float and Rectangle Float Float.
+--Create a function area :: Shape -> Float that calculates the area of the shape.
+--Calculate the area of a circle with radius 5 and a rectangle with sides 10 and 5.
+data Shape = Circle Float | Rectangle Float Float
+    deriving (Show, Eq)
+
+area :: Shape -> Float
+area (Circle r) = pi * r * r
+area (Rectangle w h) = w * h
+
+circle1 :: Shape
+circle1 = Circle 5
+
+rectangle1 :: Shape
+rectangle1 = Rectangle 10 5
+
+main :: IO ()
+main = do
+    putStrLn "Shape area calculations:"
+    putStrLn $ "Circle with radius 5: " ++ show (area circle1)
+    putStrLn $ "Rectangle with sides 10 and 5: " ++ show (area rectangle1)
+-- Output:
+Shape area calculations:
+Circle with radius 5: 78.53982
+Rectangle with sides 10 and 5: 50.0
