@@ -208,15 +208,15 @@ parseShape str = case reads str of
 main :: IO ()
 main = do
     -- Valid inputs
-    print $ parseShape "Circle 5.0"                    -- Just (Circle 5.0)
-    print $ parseShape "Rectangle 3.0 4.0"             -- Just (Rectangle 3.0 4.0)
-    print $ parseShape "Triangle 3.0 4.0 5.0"          -- Just (Triangle 3.0 4.0 5.0)
+    print $ parseShape "Circle 5.0"                    
+    print $ parseShape "Rectangle 3.0 4.0"             
+    print $ parseShape "Triangle 3.0 4.0 5.0"        
     
     -- Invalid inputs
-    print $ parseShape "Square 2.0"                    -- Nothing
-    print $ parseShape "Circle"                        -- Nothing
-    print $ parseShape "invalid input"                 -- Nothing
-    print $ parseShape "Circle 5.0 extra"              -- Nothing
+    print $ parseShape "Square 2.0"                    
+    print $ parseShape "Circle"                        
+    print $ parseShape "invalid input"                
+    print $ parseShape "Circle 5.0 extra"              
 --Output:
 Just (Circle 5.0)
 Just (Rectangle 3.0 4.0)
