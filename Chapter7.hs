@@ -123,3 +123,22 @@ Square area (Int): 25
 Square area (Double): 30.25
 Square area (Float): 10.240001
 Square area (Integer): 100
+
+--Task 6: Define a function circleCircumference that takes a radius and returns the circumference.
+--Ensure it works with both Integral and Floating numbers.
+circleCircumference :: (Floating a) => a -> a
+circleCircumference radius = 2 * pi * radius
+
+-- Helper function to convert Integral to Floating for calculation
+circleCircumferenceInt :: (Integral a, Floating b) => a -> b
+circleCircumferenceInt radius = 2 * pi * fromIntegral radius
+
+main :: IO ()
+main = do
+    putStrLn "Using Floating types directly:"
+    putStrLn $ "Circumference (Double, r=5.0): " ++ show (circleCircumference (5.0 :: Double))
+    putStrLn $ "Circumference (Float, r=3.5): " ++ show (circleCircumference (3.5 :: Float))
+    
+    putStrLn "\nUsing Integral types (converted to Floating):"
+    putStrLn $ "Circumference (Int, r=5): " ++ show (circleCircumferenceInt (5 :: Int) :: Double)
+    putStrLn $ "Circumference (Integer, r=10): " ++ show (circleCircumferenceInt (10 :: Integer) :: Double)
