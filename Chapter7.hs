@@ -107,3 +107,19 @@ Circle: Circle 5.0
 Rectangle: Rectangle 3.0 4.0
 Read circle: Circle 7.5
 Read rectangle: Rectangle 10.0 20.0
+--Task 5:Write a function squareArea that calculates the area of a square given its side length.
+--Ensure that the function works with any numeric type
+squareArea :: Num a => a -> a
+squareArea side = side * side
+
+main :: IO ()
+main = do
+    putStrLn $ "Square area (Int): " ++ show (squareArea (5 :: Int))
+    putStrLn $ "Square area (Double): " ++ show (squareArea (5.5 :: Double))
+    putStrLn $ "Square area (Float): " ++ show (squareArea (3.2 :: Float))
+    putStrLn $ "Square area (Integer): " ++ show (squareArea (10 :: Integer))
+    --Output:
+Square area (Int): 25
+Square area (Double): 30.25
+Square area (Float): 10.240001
+Square area (Integer): 100
