@@ -91,3 +91,23 @@ Unbox with default 0: 0
 Unbox with default 0: 42
 
 Double the value in fullBox: Has 84
+--Task 3: Create a function addN that takes a number and a Box a. If the box contains a number, add the given number to it.
+
+Output:
+Box Examples:
+Empty box: Empty
+Full box: Has 42
+String box: Has "Hello"
+
+Is empty box empty? True
+Is full box empty? False
+
+Unbox with default 0: 0
+Unbox with default 0: 42
+
+Double the value in fullBox: Has 84
+
+Testing addN:
+Add 10 to empty box: Empty
+Add 10 to full box: Has 52
+Add 5 to Has 100: Has 105
