@@ -39,4 +39,18 @@ Address: 123 Main St
 Company: Company {companyName = "Wimsio", companyEmployees = 50}
 Address: 15 Igbo rd.Kano
 
---Task 2:
+--Task 2: Create a data type Box a with two constructors, Empty and Has a, to represent a box that may or may not contain a value.
+
+Output:
+Box Examples:
+Empty box: Empty
+Full box: Has 42
+String box: Has "Hello"
+
+Is empty box empty? True
+Is full box empty? False
+
+Unbox with default 0: 0
+Unbox with default 0: 42
+
+Double the value in fullBox: Has 84
