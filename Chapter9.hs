@@ -40,6 +40,43 @@ Company: Company {companyName = "Wimsio", companyEmployees = 50}
 Address: 15 Igbo rd.Kano
 
 --Task 2: Create a data type Box a with two constructors, Empty and Has a, to represent a box that may or may not contain a value.
+data Box a = Empty | Has a
+  deriving (Show, Eq)
+
+isEmpty :: Box a -> Bool
+isEmpty Empty = True
+isEmpty (Has _) = False
+
+unbox :: a -> Box a -> a
+unbox defaultVal Empty = defaultVal
+unbox _ (Has x) = x
+
+mapBox :: (a -> b) -> Box a -> Box b
+mapBox _ Empty = Empty
+mapBox f (Has x) = Has (f x)
+
+main :: IO ()
+main = do
+  let emptyBox = Empty :: Box Int
+  let fullBox = Has 42 :: Box Int
+  let stringBox = Has "Hello" :: Box String
+  
+  putStrLn "Box Examples:"
+  putStrLn $ "Empty box: " ++ show emptyBox
+  putStrLn $ "Full box: " ++ show fullBox
+  putStrLn $ "String box: " ++ show stringBox
+  putStrLn ""
+  
+  putStrLn $ "Is empty box empty? " ++ show (isEmpty emptyBox)
+  putStrLn $ "Is full box empty? " ++ show (isEmpty fullBox)
+  putStrLn ""
+  
+  putStrLn $ "Unbox with default 0: " ++ show (unbox 0 emptyBox)
+  putStrLn $ "Unbox with default 0: " ++ show (unbox 0 fullBox)
+  putStrLn ""
+  
+  let doubled = mapBox (*2) fullBox
+  putStrLn $ "Double the value in fullBox: " ++ show doubled
 
 Output:
 Box Examples:
