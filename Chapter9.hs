@@ -91,8 +91,55 @@ Unbox with default 0: 0
 Unbox with default 0: 42
 
 Double the value in fullBox: Has 84
---Task 3: Create a function addN that takes a number and a Box a. If the box contains a number, add the given number to it.
 
+--Task 3: Create a function addN that takes a number and a Box a. If the box contains a number, add the given number to it.
+data Box a = Empty | Has a
+  deriving (Show, Eq)
+
+isEmpty :: Box a -> Bool
+isEmpty Empty = True
+isEmpty (Has _) = False
+
+unbox :: a -> Box a -> a
+unbox defaultVal Empty = defaultVal
+unbox _ (Has x) = x
+
+mapBox :: (a -> b) -> Box a -> Box b
+mapBox _ Empty = Empty
+mapBox f (Has x) = Has (f x)
+
+addN :: Num a => a -> Box a -> Box a
+addN _ Empty = Empty
+addN n (Has x) = Has (x + n)
+
+main :: IO ()
+main = do
+  let emptyBox = Empty :: Box Int
+  let fullBox = Has 42 :: Box Int
+  let stringBox = Has "Hello" :: Box String
+  
+  putStrLn "Box Examples:"
+  putStrLn $ "Empty box: " ++ show emptyBox
+  putStrLn $ "Full box: " ++ show fullBox
+  putStrLn $ "String box: " ++ show stringBox
+  putStrLn ""
+  
+  putStrLn $ "Is empty box empty? " ++ show (isEmpty emptyBox)
+  putStrLn $ "Is full box empty? " ++ show (isEmpty fullBox)
+  putStrLn ""
+  
+  putStrLn $ "Unbox with default 0: " ++ show (unbox 0 emptyBox)
+  putStrLn $ "Unbox with default 0: " ++ show (unbox 0 fullBox)
+  putStrLn ""
+  
+  let doubled = mapBox (*2) fullBox
+  putStrLn $ "Double the value in fullBox: " ++ show doubled
+  putStrLn ""
+  
+  putStrLn "Testing addN:"
+  putStrLn $ "Add 10 to empty box: " ++ show (addN 10 emptyBox)
+  putStrLn $ "Add 10 to full box: " ++ show (addN 10 fullBox)
+  putStrLn $ "Add 5 to Has 100: " ++ show (addN 5 (Has 100 :: Box Int))
 Output:
 Box Examples:
 Empty box: Empty
